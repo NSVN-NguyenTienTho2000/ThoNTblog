@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sự khác biệt giữa Slice, Substring và Substr trong Javascript là gì?</title>
+    <link rel='shortcut icon' href='images/logo.png'>
+    <link rel="stylesheet" type="text/css" href="css/post.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="menu-bar">
+            <div class="logo-search">
+                <a href="index.html">
+                    <img class="logo" src="images/logo.png" alt="">
+                </a>
+                <input type="search" class="search" placeholder="Tìm kiếm...">
+                <a href=""><img class="search-icon" src="https://cdn.icon-icons.com/icons2/2566/PNG/512/search_icon_153438.png" alt=""></a>
+            </div>
+            <div class="menu-list">
+                <ul>
+                    <li>
+                        <a href="index.html">Trang chủ</a>
+                    </li>
+                    <li>
+                        <a href="letandvar.html">Let và Var</a>
+                    </li>
+                    <li>
+                        <a href="stringmethod.html">Slice, Substr và Substring </a>
+                    </li>
+                    <li>
+                        <a href="selector.html">querySeclector</a>
+                    </li>
+                    <li>
+                        <a href="momentjs.html">Momentjs</a>
+                    </li>
+                    <li>
+                        <a href="jquery.html">Jquery</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="blog">
+        <div class="post">
+            <div class="author">
+                <div>
+                    <img class="image" src="images/avt.png" alt="Avatar">
+                </div>
+                <div class="name">
+                    <h1><a href="">Nguyễn Tiến Thọ</a></h1>
+                </div>
+                <div>
+                    <img class="tich" src="https://st.quantrimang.com/photos/image/2020/05/09/Tich-xanh.png" alt="Tích xanh">
+                </div>
+            </div>
+            <div class="des">
+                <h3>Sự khác biệt giữa Slice, Substring và Substr trong Javascript là gì?</h3>
+                <img src="https://ichi.pro/assets/images/max/724/1*pv-Lwv-ouct2ItHXxfAB1Q.png" alt="">
+                <p>Nếu bạn đang cố gắng thao tác chuỗi trong Javascript, thì rất có thể bạn sẽ sử dụng hoặc ít nhất, đang xem xét sử dụng các hàm thao tác chuỗi được tích hợp sẵn. Trong số này có slice(), substring()và substr()và điều có thể gây nhầm lẫn
+                    là thực tế là tất cả đều giống nhau về chức năng. Do đó, câu hỏi tự nhiên nảy sinh: chính xác thì điều gì khác biệt về những thứ này? Chúng có thể hoán đổi cho nhau nhiều không? Vào cuối bài viết, lý tưởng nhất là bạn sẽ biết câu trả
+                    lời.
+                </p>
+                <h4>Các tham số đầu vào: cách gọi chúng</h4>
+                <h4>slice()</h4>
+                <pre class="code">
+                    
+        let str = "foxtrot";
+
+        str.slice(start, end); 
+                </pre>
+                <p>start là một số nguyên mà bạn chọn chỉ mục của ký tự mà bạn muốn bắt đầu cắt. end là một số nguyên mà bạn chọn chỉ mục của ký tự mà bạn muốn kết thúc quá trình cắt.</p>
+                <br>
+                <h4>substring()</h4>
+                <pre class="code">
+
+        let str = "catdog";
+
+        str.substring(start, end);
+                </pre>
+                <p>Bạn sẽ nhận thấy rằng các thông số ở đây giống hệt như trong slice(). Điều này hoàn toàn đúng, chúng được gọi là giống nhau, và chúng đạt được kết quả như nhau. Để nhắc lại, start là một số nguyên mà bạn chọn chỉ mục của ký tự mà bạn muốn
+                    bắt đầu chuỗi con. end là một số nguyên mà bạn chọn chỉ số của ký tự mà bạn muốn kết thúc chuỗi con.</p>
+                <br>
+                <h4>substr()</h4>
+                <pre class="code">
+
+        let str = "baseball";
+
+        str.substr(start, length);
+                </pre>
+                <p>substr() hơi khác; start vẫn là tham số giống như với hai phương thức trước đó là chỉ mục của chuỗi mà bạn muốn bắt đầu chuỗi con từ đó. Tuy nhiên, đối số thứ hai không phải là chỉ mục của chuỗi mà bạn muốn chuỗi con kết thúc. Đúng hơn,
+                    đó là độ dài tính các ký tự cho đến điểm kết thúc mong muốn của bạn.</p>
+                <h4>Tham số đầu vào: chỉ sử dụng một đối số</h4>
+                <p>Tin tốt: nếu bạn bỏ qua đối số thứ hai, và điều đó có nghĩa là chỉ cung cấp một tham số đầu vào, thì điều đó có nghĩa là cả ba hàm đều thực hiện cùng một việc.</p>
+                <pre class="code">
+      
+        let str = "bookend";
+
+        str.slice(4);
+        str.substring(4);
+        str.substr(4);
+                </pre>
+                <p>Tất cả những gì họ làm là lấy một chuỗi con bắt đầu từ chỉ mục trong đối số được cung cấp. Điều đó có nghĩa là đối với cả ba điều này trong ví dụ trên, kết quả trả về là end.</p>
+                <h4>Tham số đầu vào: đối số phủ định</h4>
+                <h4>slice()</h4>
+                <pre class="code">
+
+        let str = "foxtrot";
+
+        str.slice(start, end); 
+                </pre>
+                <p>start hoặc end được phép phủ định, nhưng điều gì sẽ xảy ra khi bạn làm điều đó? Hãy nói start là -3 và end là -1.</p>
+                <br>
+                <p>Khi các đối số âm với slice(), bạn đếm từ phía sau ( cuối ) của chuỗi. Vì vậy, trong trường hợp này, bạn đếm ba ký tự từ phía sau (lưu ý rằng điều đó không có nghĩa là bạn nghịch đảo số phủ định và bắt đầu ở chỉ mục của 3) cho phần bắt
+                    đầu của lát cắt và bạn đếm một ký tự từ phía sau cho phần cuối của lát.</p>
+                <br>
+                <p>Vì vậy, để bắt đầu -3, hãy đếm ngược lại ba ký tự. Điều đó có nghĩa là chúng ta đi qua t, đi qua o, rồi đi qua r và dừng lại ở đó. Chúng tôi đang r bắt đầu ngay bây giờ.</p>
+                <br>
+                <p>Cuối cùng, chúng ta đi qua t.</p>
+                <br>
+                <p>Bây giờ chúng ta có bắt đầu ở r và kết thúc ở o.</p>
+                <br>
+                <p>Chuỗi trả về của bạn là ro.</p><br>
+                <h4>substring()</h4>
+                <pre class="code">
+                    
+        let str = "catdog";
+
+        str.substring(start, end);
+                </pre>
+                <p>Đối số phủ định khác với đối số cho slice(). Trên thực tế, các lập luận tiêu cực ngay lập tức giải quyết 0. Vì vậy, nếu bạn có start as -3 và endas -1, thì cũng giống như việc bạn có cả hai as 0.</p>
+                <br>
+                <p>Nói cách khác, nó thực sự không hoạt động và chuỗi trả về của bạn nằm "" trong trường hợp này.</p>
+                <br>
+                <p>Nếu chỉ có một đối số là phủ định, thì chỉ đối số đó chuyển thành 0. Cái còn lại vẫn giữ nguyên giá trị dương của nó.</p>
+                <br>
+                <p>Đối với substring(), chỉ cần về cơ bản không sử dụng các giá trị âm , trừ khi bạn muốn viết một số mã khó hiểu.</p>
+                <br>
+                <h4>substr()</h4>
+                <pre class="code">
+
+        let str = "baseball";
+
+        str.substr(start, length);
+                </pre>
+                <p>Trước hết, nếu đối số thứ hai (length trong ví dụ trên) là âm, thì hàm đơn giản là không hoạt động. Giá trị trả về sẽ là một chuỗi rỗng (""). Điều này có ý nghĩa về mặt logic bởi vì độ dài âm là vô nghĩa.</p><br>
+                <p>Đối số đầu tiên có thể là số âm, và về cơ bản nó có nghĩa là bạn bắt đầu đếm từ phía sau của chuỗi, giống như for slice().</p><br>
+                <p>Vì vậy, nếu bạn có start as -3 và length as 2, thì chúng tôi bắt đầu ba ký tự từ phía sau (ở thứ hai a) và sau đó đếm theo nghĩa đen là hai ký tự - nhưng ở bên phải . Điều quan trọng cần biết là hàm vẫn thực hiện những gì nó được thiết
+                    kế để làm và đó là để đưa chuỗi con về bên phải.</p><br>
+                <p>Một số âm trong đối số đầu tiên không đột nhiên làm cho hàm quay ngược lại để nhận một chuỗi con. Nó chỉ cho Javascript biết nơi bắt đầu.</p><br>
+                <p>Như vậy, đầu ra sẽ là al.</p><br>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

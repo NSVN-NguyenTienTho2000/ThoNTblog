@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thư viện momentjs</title>
+    <link rel='shortcut icon' href='images/logo.png'>
+    <link rel="stylesheet" type="text/css" href="css/post.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="menu-bar">
+            <div class="logo-search">
+                <a href="index.html">
+                    <img class="logo" src="images/logo.png" alt="">
+                </a>
+                <input type="search" class="search" placeholder="Tìm kiếm...">
+                <a href=""><img class="search-icon" src="https://cdn.icon-icons.com/icons2/2566/PNG/512/search_icon_153438.png" alt=""></a>
+            </div>
+            <div class="menu-list">
+                <ul>
+                    <li>
+                        <a href="index.html">Trang chủ</a>
+                    </li>
+                    <li>
+                        <a href="letandvar.html">Let và Var</a>
+                    </li>
+                    <li>
+                        <a href="stringmethod.html">Slice, Substr và Substring </a>
+                    </li>
+                    <li>
+                        <a href="selector.html">querySeclector</a>
+                    </li>
+                    <li>
+                        <a href="momentjs.html">Momentjs</a>
+                    </li>
+                    <li>
+                        <a href="jquery.html">Jquery</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="blog">
+        <div class="post">
+            <div class="author">
+                <div>
+                    <img class="image" src="images/avt.png" alt="Avatar">
+                </div>
+                <div class="name">
+                    <h1><a href="">Nguyễn Tiến Thọ</a></h1>
+                </div>
+                <div>
+                    <img class="tich" src="https://st.quantrimang.com/photos/image/2020/05/09/Tich-xanh.png" alt="Tích xanh">
+                </div>
+            </div>
+            <div class="des">
+                <h3>Thư viện momentjs</h3>
+                <p>Thư viện Moment là thư viện mạnh mẽ giúp bạn xử lý datetime rất tốt. Moment có thể chạy tốt ở phía trình duyệt và cả node js trên server. Website của thư viện này là <a href="https://momentjs.com/">https://momentjs.com/</a></p>
+                <h4>Nhúng thư viện vào trang</h4>
+                <ul>
+                    <li>Download : Vào <a href="https://momentjs.com/">https://momentjs.com/</a> => Nhắp moment.js trong mục Download => Save file vào folder website</li>
+                    <li>Nhúng moment.js vào trang html với lệnh "script src="moment.js""</li>
+                </ul>
+                <h4>Định dạng ngày tháng hiện tại</h4>
+                <pre class="code">
+                
+d = moment().format('MMMM Do YYYY, h:mm:ss a'); 
+console.log(d); // May 5th 2021, 11:53:52 am
+
+d = moment().format('dddd'); console.log(d); // Wednesday
+d = moment().format("MMM Do YY"); console.log(d); // May 5th 21
+d = moment().format('YYYY [escaped] YYYY'); 
+console.log(d); // 2021 escaped 2021
+
+d = moment().format(); 
+console.log(d); // 2021-05-05T11:52:57+07:00
+                </pre>
+                <h4>Tạo thời gian liên hệ với hiện tại</h4>
+                <pre class="code">
+
+d = moment().format("DD/MM/YYYY hhLmm:ss");  
+console.log(d); //05/05/2021 1205/05/202107:42
+
+d = moment("20111031", "YYYYMMDD").fromNow(); console.log(d);//10 years ago
+d = moment("20120620", "YYYYMMDD").fromNow(); console.log(d);//9 years ago
+d = moment().startOf('day').fromNow();console.log(d); // 12 hours ago
+d = moment().endOf('day').fromNow();  console.log(d); // in 12 hours
+d = moment().startOf('hour').fromNow();  console.log(d); // 8 minutes ago
+                </pre>
+                <h4>Tạo thời gian theo lịch</h4>
+                <pre class="code">
+
+d = moment().calendar(); console.log(d);  // Today at 12:20 PM   
+d = moment().subtract(10, 'days').calendar();  console.log(d);// 04/25/2021
+d = moment().subtract(6, 'days').calendar();  
+console.log(d);// Last Thursday at 12:16 PM
+
+d = moment().subtract(3, 'days').calendar();  
+console.log(d); // Last Sunday at 12:16 PM
+
+d = moment().subtract(1, 'days').calendar();  
+console.log(d);  // Yesterday at 12:16 PM
+
+d = moment().add(1, 'days').calendar();  
+console.log(d);  // Tomorrow at 12:16 PM
+
+d = moment().add(3, 'days').calendar();  
+console.log(d);  // Saturday at 12:16 PM
+
+d = moment().add(10, 'days').calendar(); 
+console.log(d); // 05/15/2021
+                </pre>
+                <h4>Các tính năng nổi bật của thư viện Moment</h4>
+                <p>Chuyển đổi định dạng ngày tháng theo format</p>
+                <p>Date Validation</p>
+                <p>Các hàm tương tác với thời gian hiện tại:</p>
+                <ul>
+                    <li>add()</li>
+                    <li>subtract()</li>
+                    <li>startOf()</li>
+                    <li>endOf()</li>
+                    <li>diff() - hàm tính chênh lệch giữa 2 điểm thời gian</li>
+                    <li>daysInMonth() - hàm lấy ngày trong tháng</li>
+                </ul>
+                <p>Còn rất nhiều tính năng hay trong thư viện này, các bạn có thể khám phá tại: <a href="https://momentjs.com/docs/">https://momentjs.com/docs/</a></p>
+            </div>
+        </div>
+</body>
+
+</html>

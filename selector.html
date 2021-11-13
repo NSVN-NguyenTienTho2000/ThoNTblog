@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Phương thức querySelector</title>
+    <link rel='shortcut icon' href='images/logo.png'>
+    <link rel="stylesheet" type="text/css" href="css/post.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="menu-bar">
+            <div class="logo-search">
+                <a href="index.html">
+                    <img class="logo" src="images/logo.png" alt="">
+                </a>
+                <input type="search" class="search" placeholder="Tìm kiếm...">
+                <a href=""><img class="search-icon" src="https://cdn.icon-icons.com/icons2/2566/PNG/512/search_icon_153438.png" alt=""></a>
+            </div>
+            <div class="menu-list">
+                <ul>
+                    <li>
+                        <a href="index.html">Trang chủ</a>
+                    </li>
+                    <li>
+                        <a href="letandvar.html">Let và Var</a>
+                    </li>
+                    <li>
+                        <a href="stringmethod.html">Slice, Substr và Substring </a>
+                    </li>
+                    <li>
+                        <a href="selector.html">querySeclector</a>
+                    </li>
+                    <li>
+                        <a href="momentjs.html">Momentjs</a>
+                    </li>
+                    <li>
+                        <a href="jquery.html">Jquery</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="blog">
+        <div class="post">
+            <div class="author">
+                <div>
+                    <img class="image" src="images/avt.png" alt="Avatar">
+                </div>
+                <div class="name">
+                    <h1><a href="">Nguyễn Tiến Thọ</a></h1>
+                </div>
+                <div>
+                    <img class="tich" src="https://st.quantrimang.com/photos/image/2020/05/09/Tich-xanh.png" alt="Tích xanh">
+                </div>
+            </div>
+            <div class="des">
+                <h3>Phương thức querySelector</h3>
+                <p>Phương thức querySelector() trả về phần tử đầu tiên là phần tử con của phần tử mà nó được gọi ra khớp với nhóm bộ chọn được chỉ định.</p>
+                <p>Lưu ý: Phương thức querySelector() chỉ trả về phần tử đầu tiên khớp với các bộ chọn được chỉ định. Để trả về tất cả các kết quả phù hợp, sử dụng phương thức querySelectorAll() để thay thế.</p>
+                <p>Nếu bộ chọn khớp với ID trong tài liệu được sử dụng nhiều lần (Lưu ý rằng “id” phải là duy nhất trong một trang và không nên được sử dụng nhiều lần), nó sẽ trả về phần tử khớp đầu tiên.</p>
+                <h4>Cú pháp</h4>
+                <pre class="code">
+
+        element = document.querySelector(CSS selectors)
+                </pre>
+                <p>Hoặc</p>
+                <pre class="code">
+
+        element = baseElement.querySelector(CSS selectors);
+                </pre>
+                <h4>Giá trị tham số</h4>
+                <h5>CSS selectors:</h5>
+                <p style="background-color: black; width: 50px;">String.</p>
+                <p>Chỉ định một hoặc nhiều bộ chọn CSS để khớp với phần tử. Chúng được sử dụng để chọn các phần tử HTML dựa trên id, lớp, loại, thuộc tính, giá trị của thuộc tính, v.v.</p>
+                <p>Đối với nhiều bộ chọn, hãy tách riêng từng bộ chọn bằng dấu phẩy. Phần tử trả về phụ thuộc vào phần tử nào được tìm thấy đầu tiên trong tài liệu.</p>
+                <h4>Giá trị trả về:</h4>
+                <p>Một đối tượng NodeList, biểu diễn phần tử đầu tiên khớp với (các) bộ chọn CSS được chỉ định. Nếu không tìm thấy kết quả phù hợp, null sẽ được trả về. Ném ngoại lệ SYNTAX_ERR nếu bộ chọn được chỉ định không hợp lệ.</p>
+                <h4>Ví dụ</h4>
+                <p>Lấy phần tử p đầu tiên trong tài liệu:</p>
+                <pre class="code">
+
+        var el = document.querySelector("p");
+                </pre>
+                <p>Thay đổi văn bản của phần tử có id="demo":</p>
+                <pre class="code">
+                    
+        document.querySelector("#demo").innerHTML = "Hello World!";
+                </pre>
+                <p>Lấy phần tử p đầu tiên là con của một phần tử div</p>
+                <pre class="code">
+                    
+        var el = document.querySelector("div > p");
+                </pre>
+            </div>
+        </div>
+</body>
+
+</html>
