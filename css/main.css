@@ -166,6 +166,7 @@ body {
 
 .main .info {
     position: sticky;
+    z-index: 9998 !important;
     top: 70px;
     border-radius: 15px;
     background-color: rgb(51, 49, 49);
@@ -205,6 +206,7 @@ body {
 
 .images {
     position: sticky;
+    position: -webkit-sticky;
     top: 380px;
     border-radius: 15px;
     margin-top: 10px;
@@ -238,28 +240,31 @@ body {
 .blog {
     width: 60%;
     height: auto;
-    background-color: rgb(51, 49, 49);
+    min-height: 750px;
     position: absolute;
     top: 0;
     right: 0;
     border-radius: 15px;
-    padding: 20px 2.5%;
+    padding: 0px 0px 20px;
     box-sizing: border-box;
     color: white;
 }
 
 .blog h1 {
+    margin-top: 10px;
     margin-bottom: 10px;
 }
 
 .post {
     position: relative;
-    width: 95%;
+    background-color: rgb(51, 49, 49);
+    width: 100%;
     height: auto;
-    margin: auto;
+    margin: auto auto 15px auto;
     padding: 10px 10px;
-    border-radius: 10px;
-    border: 1px solid rgb(148, 147, 147);
+    border-radius: 15px;
+    box-sizing: border-box;
+    /* border: 1px solid rgb(148, 147, 147); */
 }
 
 .author {
@@ -280,7 +285,7 @@ body {
 .author .name {
     position: absolute;
     left: 45px;
-    top: -3px;
+    top: -13px;
 }
 
 .author .name a {
@@ -328,11 +333,10 @@ h5 {
 .des a {
     text-decoration: none;
     color: #4599ff;
-    ;
 }
 
 .des img {
-    width: 600px;
+    width: 100%;
     position: relative;
     margin: 10px auto;
 }
@@ -345,4 +349,19 @@ h5 {
 .des .code {
     background-color: black;
     margin: 10px auto;
+}
+
+.des .tag {
+    text-decoration: none;
+    color: #4599ff;
+}
+
+.show-hide {
+    text-decoration: none;
+    color: #4599ff;
+}
+
+.show-hide:hover {
+    text-decoration: underline;
+    color: #56a0fa;
 }

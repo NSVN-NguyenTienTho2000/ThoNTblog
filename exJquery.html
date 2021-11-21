@@ -6,6 +6,8 @@
     <title>ThoNT's Blog</title>
     <link rel='shortcut icon' href='images/logo.png'>
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./main.js"></script>
 </head>
 
 <body>
@@ -160,22 +162,49 @@
                     </div>
                 </div>
                 <div class="des">
-                    <h4>Dưới đây là danh sách bài viết của mình: </h4>
-                    <ol>
-                        <li><a href="letandvar.html">Sự khác biệt giữa let và var trong Javascript.</a></li>
-                        <li>
-                            <a href="stringmethod.html">Sự khác biệt giữa slice với substr và substring</a>
-                        </li>
-                        <li>
-                            <a href="selector.html">Các cách sử dụng querySelector trong Javascript</a>
-                        </li>
-                        <li>
-                            <a href="momentjs.html">Thư viện Momentjs</a>
-                        </li>
-                        <li>
-                            <a href="jquery.html">Thư viện Jquery</a>
-                        </li>
-                    </ol>
+                    <h3>jQuery là thư viện dùng ở client hay server?</h3>
+                    <p>- jQuery là thư viện dùng ở client</p>
+                    <h3>CDN là gì?</h3>
+                    <p>CDN là viết tắt của Content Delivery Network tạm dịch sang Tiếng Việt là “mạng phân phối nội dung”. Nó là một hệ thống gồm nhiều máy chủ đặt trên toàn cầu làm nhiệm vụ sao lưu các nội dung tĩnh bên trong website, sau đó phân tán nó
+                        ra nhiều máy chủ khác (được gọi là PoP – Points of Presence) và từ các PoP đó nó sẽ gửi tới cho người dùng khi họ truy cập vào website.</p>
+                    <div class="hide1">
+                        <ul>
+                            <li>Người dùng truy cập từ Việt Nam, PoP đặt tại TP Hồ Chí Minh sẽ phục vụ bạn.</li>
+                            <li>Người dùng truy cập từ Mỹ, PoP ở San Jose, California hay Los Angeles, California,…. sẽ phục vụ bạn.</li>
+                            <li>Người dùng truy cập từ EU, PoP ở Amsterdam, Netherlands sẽ phục vụ bạn. Trước tiên, mời bạn xem qua mô hình khác nhau giữa một website không sử dụng CDN và một website có sử dụng CDN.</li>
+                        </ul>
+                        <h4>3 CDN phổ biến có jQuery</h4>
+                        <p>Đầu tiên phải kể đến là CDN của chính tác giả viết ra jQuery, tuy nó có tên miền là jquery.com nhưng server được tài trợ bởi MaxCDN.</p>
+                        <pre class="code">
+    
+src="//code.jquery.com/jquery-1.11.3.min.js" 
+                        </pre>
+                        <p>Tiếp đến là dịch vụ CDN của Google, nói tới Google thì cảm giác thân thiện, nhiều người dùng. Tuy nhiên, không phải phiên bản nào của jQuery cũng xuất hiện trên Google CDN.</p>
+                        <pre class="code">
+    
+src="https://ajax.googleapis.com/ajax/libs/jquery
+/1.11.3/jquery.min.js"
+                        </pre>
+                        <p>Dịch vụ thứ 3 nữa mình muốn nói đến là dịch vụ CDN của Microsoft, đây cũng là một hãng công nghệ lớn, đặc biệt họ còn có luôn một ngôn ngữ lập trình web nữa đó là ASP.NET, do vậy trong đường link cũng có tên của ngôn ngữ này.</p>
+                        <pre class="code">
+    
+src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"
+                        </pre>
+                        <h4>Lợi ích khi sử dụng CDN là gì?</h4>
+                        <ul>
+                            <li>Cải thiện tốc độ tải trang, tăng tốc độ truy cập</li>
+                            <li>Xử lý tải lưu lượng truy cập cao</li>
+                            <li>Chặn người gửi spam, trình gỡ rối và các bot không hợp lệ khác</li>
+                            <li>Tiết kiệm chi phí</li>
+                            <li>Giảm mức tiêu thụ, tiết kiệm băng thông cho máy chủ gốc</li>
+                            <li>Cân bằng tải giữa nhiều máy chủ, tiết kiệm dung lượng</li>
+                            <li>Bảo vệ trang web của bạn khỏi các cuộc tấn công DDoS</li>
+                            <li>Bảo vệ ứng dụng của bạn</li>
+                        </ul>
+                    </div>
+                    <div class="show-hide">
+                        <span class="show-text1">Xem thêm...</span><span class="hide-text1">Ẩn</span>
+                    </div>
                 </div>
             </div>
             <div class="post" id="post-2">
@@ -191,30 +220,24 @@
                     </div>
                 </div>
                 <div class="des">
-                    <h4>Nhấn vào hagtag bên dưới để chuyển đến trang bài tập về jQuery nhé!</h4>
-                    <h5 class="tag"><a href="exJquery.html">#jQuery_Exercise</a></h5>
+                    <h3>jQuery có thể sử dụng thay thế JavaScript được không?</h3>
+                    <p>jQuery có thể được sử dụng thay thế cho JavaScript. Nó là một thư viện JavaScript. Sự khác biệt giữa JavaScript và jQuery là JavaScript là một ngôn ngữ thông dịch cấp cao trong khi jQuery là một thư viện JavaScript. Nó được thiết kế
+                        để đơn giản hóa các tác vụ đạt được khi sử dụng JavaScript.</p>
+                    <div class="hide2">
+                        <h4>Nhược điểm của jQuery</h4>
+                        <p><strong>Ảnh hưởng đến việc nhận thức</strong> Điều này dễ thấy khi chúng ta bắt đầu sử dụng một framework khi chưa nắm rõ bản chất, quá trình thực thi của nó. Framework cung cấp cho chúng ta các phương thức để lập trình một cách
+                            dễ dàng thì jQuery cũng vậy. Một trình tự đúng sẽ là: Javascript > Web API > jQuery. Nhưng nhiều người tiếp xúc ngay với jQuery và không hiểu về bản chất các vấn dề đằng sau nó. Điều này sẽ không tốt cho sự phát triển về mặt
+                            chuyên môn.</p>
+                        <p><strong>Phải import thư viện khi sử dụng</strong> Bạn không thể chỉ lấy một phần jQuery cho những gì bạn cần. Bạn buộc phải import toàn bộ thư viện với kích thước tối thiểu khoảng gần 300KB hoặc sử dụng thư viện đã minified có
+                            kích thước khoảng 30KB. Bạn nghĩ đây có phải là vấn đề lớn không. Hãy thử tưởng tượng, trong một ngày đẹp trời website của bạn đón nhận 1 triệu request, lượng tải jQuery sẽ tương đương 30GB. Đó là còn chưa kể bạn có thể sẽ
+                            sử dụng thêm hàng tá các plugin đi kèm. Sẽ có bạn thay thế bằng việc sử dụng CDN nhưng điều đó chỉ giảm tải cho server chứ không giúp tốc độ tải trang nhanh hơn.</p>
+                        <p><strong>Tốc độ xử lý</strong> Về bản chất, jQuery viết các hàm xử lý bao ngoài JavaScript để thân thiện hơn với người dùng, việc này đương nhiên sẽ làm cho tốc độ xử lý chậm hơn.</p>
+                    </div>
+                    <div class="show-hide">
+                        <span class="show-text2">Xem thêm...</span><span class="hide-text2">Ẩn</span>
+                    </div>
                 </div>
             </div>
-            <div class="post" id="post-3">
-                <div class="author">
-                    <div>
-                        <img class="image" src="images/avt.png" alt="Avatar">
-                    </div>
-                    <div class="name">
-                        <h1><a href="">Nguyễn Tiến Thọ</a></h1>
-                    </div>
-                    <div>
-                        <img class="tich" src="https://st.quantrimang.com/photos/image/2020/05/09/Tich-xanh.png" alt="Tích xanh">
-                    </div>
-                </div>
-                <div class="des">
-                    <h4>Ảnh jQuery quiz trên W3C:</h4>
-                    <img class="img-quiz" src="images/jQueryQuiz.png" alt="">
-                </div>
-            </div>
-        </div>
-
-    </div>
 </body>
 
 </html>
