@@ -237,7 +237,7 @@ body {
 
 .blog {
     width: 60%;
-    height: 750px;
+    height: auto;
     background-color: rgb(51, 49, 49);
     position: absolute;
     top: 0;
